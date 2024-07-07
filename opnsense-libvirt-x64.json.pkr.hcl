@@ -24,7 +24,7 @@ variable "disk_size" {
 
 variable "headless" {
   type    = string
-  default = "false"
+  default = "true"
 }
 
 variable "iso_sha256_checksum" {
@@ -101,6 +101,9 @@ build {
       output              = "output/opnsense.box"
       provider_override   = "libvirt"
       vagrantfile_template = "tpl/opnsense.rb"
+      include = [
+        "metadata/info.json"
+      ]
     }
   }
 }
