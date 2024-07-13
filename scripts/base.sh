@@ -4,6 +4,7 @@ set -eux
 
 # Enable FRRouting. BGP,OSPF, RIP, etc.
 pkg install -y os-frr
+pkg install -y os-qemu-guest-agent
 
 echo "upgrading opnsense"
 opnsense-update

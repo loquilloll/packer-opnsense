@@ -11,7 +11,7 @@
 # sudo virsh vol-delete --pool default $VOLUME
 
 # Build box
-packer build opnsense.json.pkr.hcl
+packer build opnsense-libvirt-x64.json.pkr.hcl
 
 # Add new box to vagrant
 # vagrant box add output/opnsense.box --name loquilloll/opnsense
